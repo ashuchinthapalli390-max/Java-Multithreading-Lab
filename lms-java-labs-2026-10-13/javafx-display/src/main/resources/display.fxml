@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      alignment="CENTER" spacing="10" prefWidth="600" prefHeight="400">
+    <children>
+        <Label text="Hello, JavaFX!" style="-fx-font-size: 24px;" />
+        <ImageView fitWidth="400" fitHeight="300" preserveRatio="true">
+            <image><Image url="@landscape.png" /></image>
+        </ImageView>
+    </children>
+</VBox>
