@@ -24,17 +24,17 @@ public class TipController {
             BigDecimal tip = bill.multiply(percent).divide(new BigDecimal("100"))
                     .setScale(2, RoundingMode.HALF_UP);
             BigDecimal total = bill.add(tip).setScale(2, RoundingMode.HALF_UP);
-            tipAmount.setText("Tip Amount: " + tip.toPlainString());
-            totalAmount.setText("Total Amount: " + total.toPlainString());
+            tipAmount.setText("Tip Amount: $" + tip.toPlainString());
+            totalAmount.setText("Total Amount: $" + total.toPlainString());
             errorMessage.setText("");
         } catch (NumberFormatException e) {
-            tipAmount.setText("Tip Amount: 0.00");
-            totalAmount.setText("Total Amount: 0.00");
-            errorMessage.setText("Enter valid numbers in both fields.");
+            tipAmount.setText("");
+            totalAmount.setText("");
+            errorMessage.setText("Error: Invalid input. Please enter numbers.");
         } catch (IllegalArgumentException e) {
-            tipAmount.setText("Tip Amount: 0.00");
-            totalAmount.setText("Total Amount: 0.00");
-            errorMessage.setText(e.getMessage());
+            tipAmount.setText("");
+            totalAmount.setText("");
+            errorMessage.setText("Error: Invalid input. Please enter numbers.");
         }
     }
 
@@ -42,8 +42,8 @@ public class TipController {
     private void resetFields() {
         billAmount.clear();
         tipPercentage.clear();
-        tipAmount.setText("Tip Amount: 0.00");
-        totalAmount.setText("Total Amount: 0.00");
+        tipAmount.setText("");
+        totalAmount.setText("");
         errorMessage.setText("");
         billAmount.requestFocus();
     }

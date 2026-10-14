@@ -15,11 +15,11 @@
         <Label text="Tip percentage" />
         <TextField fx:id="tipPercentage" promptText="Enter tip percentage" onAction="#calculateTip" />
         <HBox spacing="10"><children>
-            <Button text="Calculate" onAction="#calculateTip" defaultButton="true" />
+            <Button text="Calculate Tip" onAction="#calculateTip" defaultButton="true" />
             <Button text="Reset" onAction="#resetFields" />
         </children></HBox>
-        <Label fx:id="tipAmount" text="Tip Amount: 0.00" />
-        <Label fx:id="totalAmount" text="Total Amount: 0.00" />
+        <Label fx:id="tipAmount" text="" />
+        <Label fx:id="totalAmount" text="" />
         <Label fx:id="errorMessage" wrapText="true" style="-fx-text-fill: #b91c1c;" />
     </children>
 </VBox>
